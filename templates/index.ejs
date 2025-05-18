@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Weather Tracker</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+    <h1>Save a Location</h1>
+    <form action="/saveLocation" method="post">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+       
+        <label for="state">State (if applicable):</label>
+        <input type="text" id="state" name="state">
+
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+   
+        <button type="submit">Save Location</button>
+    </form>
+   
+
+
+    <h2>View Saved Locations & Weather</h2>
+    <form action="/getWeather" method="get">
+        <button type="submit">Show Weather</button>
+    </form>
+
+
+    <form action = "/removeAll" method="post">
+        <button type="submit">Remove All</button>
+    </form>
+</body>
+</html>
